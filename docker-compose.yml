@@ -1,0 +1,21 @@
+#author:Gaurav DevOps: This is use to run mysql container
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql_server
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'bhutani'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'lucifer-666'
+      MYSQL_ROOT_PASSWORD: 'lucifer-666'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - bhutani_db:/var/lib/mysql
+
+volumes:
+  bhutani_db:
