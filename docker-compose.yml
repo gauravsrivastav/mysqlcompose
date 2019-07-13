@@ -15,7 +15,7 @@ services:
     expose:
       - '3306'
     volumes:
-      - bhutani_db:/var/lib/mysql
+      - db:/var/lib/mysql
 
 volumes:
-  bhutani_db:
+  db:
